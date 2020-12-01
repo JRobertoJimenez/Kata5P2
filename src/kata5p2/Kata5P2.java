@@ -10,14 +10,13 @@ import kata4.model.Histogram;
 import kata4.model.Mail;
 import kata4.view.HistogramDisplay;
 import kata4.view.MailHistogramBuilder;
-import kata4.view.MailListReader;
+import kata4.view.MailListReaderBD;
 
 /**
  *
  * @author José Roberto Jiménez
  */
 public class Kata5P2 {
-    private static String fileName="email.txt";
     private static List<Mail> listMail;
     private static Histogram<String> histogram;
     
@@ -29,7 +28,7 @@ public class Kata5P2 {
     }
     
     private static void input(){
-        listMail = MailListReader.read(fileName);
+        listMail = MailListReaderBD.read();
         
     }
     
